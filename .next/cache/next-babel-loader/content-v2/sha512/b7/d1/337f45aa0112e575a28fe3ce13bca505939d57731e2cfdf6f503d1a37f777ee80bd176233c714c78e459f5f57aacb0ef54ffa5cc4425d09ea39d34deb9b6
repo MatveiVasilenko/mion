@@ -1,0 +1,1 @@
+{"ast":null,"code":"const StateApp = () => {\n  const state = {\n    auth: false,\n    user: null\n  };\n  return state;\n};\n\nexport default StateApp;","map":null,"metadata":{},"sourceType":"module"}

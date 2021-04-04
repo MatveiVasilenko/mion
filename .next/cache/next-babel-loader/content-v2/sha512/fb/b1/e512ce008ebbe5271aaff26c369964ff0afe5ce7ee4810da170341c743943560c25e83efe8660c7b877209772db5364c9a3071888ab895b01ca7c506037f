@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var NET = {\n  // BACK_URL: 'http://192.168.0.104:8000/api',\n  // BACK_URL_MODULE: 'http://192.168.0.104:8000',\n  // FRONT_URL: 'http://192.168.0.104:8000'\n  BACK_URL: 'https://www.mion.courses/api',\n  BACK_URL_MODULE: 'https://www.mion.courses',\n  FRONT_URL: 'https://www.mion.courses'\n};","map":null,"metadata":{},"sourceType":"module"}

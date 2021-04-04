@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const DATA = {\n  name: 'Motich Production'\n};","map":{"version":3,"sources":["D:/MotichProduction/motich/project/data.js"],"names":["DATA","name"],"mappings":"AAAA,OAAO,MAAMA,IAAI,GAAG;AAChBC,EAAAA,IAAI,EAAE;AADU,CAAb","sourcesContent":["export const DATA = {\r\n    name: 'Motich Production'\r\n}"]},"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from 'react';\n\nconst FieldError = ({\n  classes,\n  textError\n}) => {\n  return /*#__PURE__*/_jsx(\"div\", {\n    className: classes.fieldError,\n    children: textError\n  });\n};\n\nexport default FieldError;","map":null,"metadata":{},"sourceType":"module"}

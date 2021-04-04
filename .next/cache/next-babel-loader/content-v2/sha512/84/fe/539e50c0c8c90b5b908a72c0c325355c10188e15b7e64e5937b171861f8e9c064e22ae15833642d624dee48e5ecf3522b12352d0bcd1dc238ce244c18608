@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const USER_TOKEN = 'USER_TOKEN';","map":{"version":3,"sources":["D:/MotichProduction/motich/context/App/creators.js"],"names":["USER_TOKEN"],"mappings":"AAAA,OAAO,MAAMA,UAAU,GAAG,YAAnB","sourcesContent":["export const USER_TOKEN = 'USER_TOKEN'"]},"metadata":{},"sourceType":"module"}

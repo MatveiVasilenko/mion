@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { USER_TOKEN } from './creators';\nexport var createToken = function createToken(user) {\n  return {\n    type: USER_TOKEN,\n    payload: user\n  };\n};","map":null,"metadata":{},"sourceType":"module"}
