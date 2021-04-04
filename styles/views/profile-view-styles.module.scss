@@ -1,0 +1,276 @@
+@import './../global.module.scss';
+
+.refferalHead {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    color: $colorLight;
+}
+.refferalHeadItem {
+    padding: 6px 12px;
+    background: $colorLight;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+    min-width: 220px;
+}
+.refferalHeadItemText {
+    color: $colorMain;
+    text-align: center;
+    font-size: 22px;
+}
+.refferalHeadItemNumber {
+    color: $colorTrack;
+    text-shadow: 0px 3px 4px rgba(118, 110, 170, 0.77);
+    text-align: center;
+    font-weight: 500;
+    font-size: 40px;
+}
+.headItemLine {
+    display: flex;
+    align-items: center;
+}
+.refferalHeadItemTarif {
+    padding: 6px 12px;
+    background: $colorLight;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 115px 0 85px;
+}
+.refferalHeadItemNumberDate {
+    color: $colorTrack;
+    text-shadow: 0px 3px 4px rgba(118, 110, 170, 0.77);
+    text-align: center;
+    font-weight: 500;
+    font-size: 36px;
+    margin-left: 10px;
+}
+.refferalHeadItemNumberTarif {
+    color: $colorTrack;
+    text-shadow: 0px 3px 4px rgba(118, 110, 170, 0.77);
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+    margin-left: 10px;
+}
+//MOBILE
+.refferalHeadMob {
+    height: 65px;
+    background: $backgroundMenu;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% + 24px);
+    margin-left: -12px;
+    margin-top: -10px;
+}
+.refferalHeadItemMob {
+    background: $backgroundMenuItem;
+    border: 1px solid $colorMain;
+    fill: $colorLight;
+    // stroke: $colorLight;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.refferalHeadItemWrapperMob {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+}
+.refferalHeadItemSvgMob {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-50%);
+}
+.refferalHeadItemTextMob {
+    font-size: 12px;
+    color: $colorLight;
+}
+.refferalHeadItemTextMobSmall {
+    font-size: 10px;
+    color: $colorLight;
+}
+.refferalHeadItemNumberMob {
+    font-size: 16px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #FDFFA6 0%, #FF7A00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+.refferalHeadItemNumberMobSmall {
+    font-size: 12px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #FDFFA6 0%, #FF7A00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 2px 0;
+}
+//Profile
+.profileWrapper {
+    display: flex;
+    font-style: italic;
+    padding: 24px 0;
+}
+.profileItemLeft {
+    width: 35%;
+}
+.profileBtnTarif {
+    background: $gradientThird;
+    padding: 12px 32px;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+        box-shadow: $boxShadow;
+    }
+}
+.profileBtnTarifUp {
+    font-weight: 500;
+    font-size: 32px;
+}
+.profileBtnTarifDown {
+    text-align: right;
+    font-size: 26px;
+}
+.profileLispWrapper {
+    margin-top: 24px;
+}
+.profileLispItem {
+    background: $colorLight;
+    padding: 15px 24px;
+    border-radius: 24px;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.profileItemCenter {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+.profileImage {
+    width: 255px;
+    height: 255px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $colorLight;
+    border-radius: 50%;
+}
+.profileImageSvg {
+    width: 80px;
+    height: 80px;
+}
+.profileItemRight {
+    width: 40%;
+}
+.profileLink {
+    background: linear-gradient(181.21deg, rgba(14, 16, 61, 0.6) -10.46%, rgba(16, 18, 69, 0.222) 21.39%, rgba(9, 118, 133, 0.276) 73.04%, rgba(7, 156, 176, 0.42) 98.81%);
+    border: 2px solid $colorLight;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profileLinkTitle {
+    background: $gradientThird;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+}
+.profileLinkElem {
+    color: $colorLight;
+    background: transparent;
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-style: italic;
+    margin: 20px 0;
+}
+.profileLinkBtn {
+    background: $colorLight;
+    color: $colorMain;
+    font-size: 22px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 500;
+    font-style: normal;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+        box-shadow: $boxShadow;
+    }
+}
+@media screen and (max-width: 1700px) {
+    
+}
+@media screen and (max-width: 1500px) {
+    
+}
+@media screen and (max-width: 1366px) {
+    
+}
+@media screen and (max-width: 768px) {
+    
+}
+@media screen and (max-width: 576px) {
+    .profileWrapper {
+        flex-wrap: wrap;
+        padding: 12px 0;
+    }
+    .profileItemLeft {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    .profileItemCenter {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    .profileItemRight {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    .profileLispItem {
+        font-size: 20px;
+    }
+    .profileImage {
+        width: 200px;
+        height: 200px;
+    }
+    .profileLink {
+        padding: 12px;
+        text-align: center;
+    }
+    .profileLinkTitle {
+        font-size: 22px;
+    }
+    .profileLinkElem {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    .profileLinkBtn {
+        border-radius: 15px;
+        padding: 5px 15px;
+        font-size: 18px;
+    }
+}

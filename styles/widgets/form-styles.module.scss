@@ -1,0 +1,52 @@
+@import './../global.module.scss';
+
+.inputWrapper {
+    width: 100%;
+    position: relative;
+}
+.input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid $colorMain;
+    border-radius: 16px;
+    font-size: 28px;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 16px;
+    &:focus {
+        outline: none;
+    }
+}
+.inputError {
+    border-color: $colorError;
+}
+.fieldError {
+    color: $colorError;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.inputIcon {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 15px;
+    transform: translateY(-50%);
+}
+.svgInput {
+    width: 45px;
+    height: 45px;
+}
+.inputIconPassword {
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 15px;
+    transform: translateY(-50%);
+}
+@media screen and (max-width: 576px) {
+    .input {
+        font-size: 20px;
+    }
+    .svgInput {
+        width: 20px;
+        height: 20px;
+    }
+}

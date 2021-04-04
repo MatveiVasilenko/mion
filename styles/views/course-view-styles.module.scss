@@ -1,0 +1,166 @@
+@import './../global.module.scss';
+
+.courseWrapper {
+    display: flex;
+    color: $colorLight;
+    font-size: 18px;
+}
+.breadcrumb {
+    height: 25px;
+    color: $colorLight;
+    font-size: 16px;
+    cursor: pointer;
+}
+.courseParent {
+    width: 65%;
+    transition: $transition;
+}
+.courseParentActive {
+    transition: $transition;
+    width: 50%;
+}
+.courseItem {
+    // width: 60%;
+    height: 250px;
+    border: 1px solid $colorLight;
+    margin-bottom: 16px;
+    background-size: cover;
+    position: relative;
+    box-shadow: 5px 5px 10px 3px rgba(255,255,255, 0.1);
+    cursor: pointer;
+    transform: translateX(0px);
+    transition: $transition;
+}
+.courseItem:hover {
+    transform: translateX(5px);
+}
+.courseParentActive .courseItem:hover {
+    transform: translateX(0px);
+}
+.courseItemBody {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 9;
+    width: 70%;
+}
+.courseItemBodyHead {
+    
+}
+.courseItemBodyTitle {
+    font-size: 48px;
+}
+.courseItemBodyHours {
+    font-size: 36px;
+}
+.courseItemBodyFooter {
+    display: flex;
+    align-items: center;
+}
+.courseItemBodyDate {
+    font-size: 18px;
+    padding-right: 10px;
+}
+.courseItemDesc {
+    background-color: $colorLight;
+    color: $colorMain;
+    font-size: 32px;
+    opacity: 0;
+    transition: $transition;
+    height: 0;
+    border-radius: 8px;
+}
+.courseItemDescActive {
+    padding: 16px;
+
+    height: 300px;
+    opacity: 1;
+}
+//Context 
+.contentParent {
+    width: 35%;
+    opacity: 0;
+    transition: $transition;
+    padding: 0px 16px 16px 40px;
+}
+.contentParentActive {
+    width: 50%;
+    transition: $transition;
+    opacity: 1;
+}
+.contentHead {
+    text-align: center;
+    width: 100%;
+    padding: 16px;
+    font-size: 28px;
+    background: $gradientMain;
+    border: 1px solid $colorLight;
+}
+.contentItem {
+    width: 100%;
+    background: $colorLight;
+    color: $colorMain;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 12px;
+    font-size: 22px;
+    cursor: pointer;
+    border: 2px solid $colorLight;
+    transition: $transition;
+}
+.contentItem:hover {
+    border-color: $colorMain;
+}
+.contentItemTitle {
+    padding: 0 5px;
+}
+@media screen and (max-width: 1700px) {
+    .courseItem {
+        // width: 60%;
+        height: 200px;
+    }
+    .courseItemBodyTitle {
+        font-size: 40px;
+    }
+    .courseItemBodyHours {
+        font-size: 32px;
+    }
+    .courseItemDesc {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 1366px) {
+    
+}
+@media screen and (max-width: 768px) {
+    
+}
+@media screen and (max-width: 576px) {
+    .courseWrapper {
+        flex-wrap: wrap;
+    }
+    .courseParent {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+    .courseItemBody {
+        width: 100%;
+    }
+    .courseItemBodyTitle {
+        font-size: 24px;
+    }
+    .courseItemBodyHours {
+        margin-top: 10px;
+        font-size: 22px;
+    }
+    .contentParentActive {
+        padding: 0px;
+        width: 100%;
+    }
+}

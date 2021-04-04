@@ -1,0 +1,154 @@
+@import './../global.module.scss';
+
+.officeWrapper {
+    background-color: $colorMain;
+}
+.officeLogo {
+    background: linear-gradient(180deg, #CD0F32 -32.73%, #931634 -24.92%, #CD0F32 27.15%, #741140 70.54%, #9E1039 89.63%, #A01739 115.67%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // color: #0B2349;
+    display: table;
+    padding-left: 40px;
+    // margin: 20px auto;
+}
+.officeSocial {
+    display: flex;
+    align-items: center;
+}
+.officeSocialItem {
+    cursor: pointer;
+}
+.officeWrapperHeader {
+    background: $headerColor;
+    // color: $colorLight;
+    height: 100px;
+    font-family: $fontFamilyHead;
+    font-size: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $colorLight;
+    padding: 0 24px;
+    // width: 1700px;
+    // margin: 0 auto;
+    // padding-left: 175px;
+}
+.officeWrapperBody {
+    display: flex;
+}
+.officeWrapperMenu {
+    background-color: $colorMain;
+    color: $colorLight;
+    width: 100px;
+    text-align: center;
+    min-height: 95vh;
+    width: 130px;
+    border-right: 1px solid $colorLight;
+}
+.officeWrapperContent {
+    width: 100%;
+}
+.officeWrapperMenuItem {
+    cursor: pointer;
+    font-size: 24px;
+    padding: 20px 0 10px 0;
+    border-bottom: 1px solid $colorLight;
+    transition: $transition;
+    fill: $colorLight;
+    stroke: $colorLight;
+    &:hover {
+        color: $colorMain;
+        fill: $colorMain;
+        stroke: $colorMain;
+        background-color: $colorLight;
+    }
+}
+.containerOffice {
+    width: 100%;
+    padding: 16px 24px;
+}
+.menuMob {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    background: $backgroundMenu;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 999;
+}
+.menuMobItem {
+}
+.menuMobSvg {
+    background: $backgroundMenuItem;
+    border: 1px solid $colorMain;
+    fill: $colorLight;
+    stroke: $colorLight;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 1700px) {
+    .officeWrapperHeader {
+        height: 80px;
+        font-size: 48px;        
+        // padding-left: 150px;
+    }
+    .officeWrapperMenu {
+        width: 150px;
+    }
+    // .containerOffice {
+    //     width: 1400px;
+    // }
+}
+@media screen and (max-width: 1500px) {
+    // .containerOffice {
+    //     width: 1200px;
+    // }
+}
+@media screen and (max-width: 1366px) {
+    .officeWrapperHeader {
+        height: 80px;
+        font-size: 36px;
+    }
+    // .containerOffice {
+    //     width: 1000px;
+    // }
+}
+@media screen and (max-width: 768px) {
+    .officeWrapperHeader {
+        height: 80px;
+        font-size: 36px;
+
+    }
+}
+@media screen and (max-width: 576px) {
+    .officeWrapperBody {
+        overflow-x: hidden;
+    }
+    .containerOffice {
+        padding: 8px 12px;
+        margin-bottom: 65px;
+    }
+    .officeWrapperMenu {
+        width: 0;
+    }
+    .officeWrapperMenuItem {
+        display: none;
+    }
+    .officeWrapperHeader {
+        height: 60px;
+        padding: 0 12px;
+    }
+    .officeLogo {
+        padding-left: 0;
+        margin: 10px 0;
+        font-size: 32px;
+    }
+}

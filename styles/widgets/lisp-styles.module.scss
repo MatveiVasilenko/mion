@@ -1,0 +1,33 @@
+@import './../global.module.scss';
+
+.contentHead {
+    text-align: center;
+    width: 100%;
+    padding: 16px;
+    font-size: 28px;
+    background: $gradientMain;
+    border: 1px solid $colorLight;
+}
+.contentBody {
+    max-height: 100vh;
+    overflow-y: auto;
+}
+.contentItem {
+    width: 100%;
+    background: $colorLight;
+    color: $colorMain;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 12px;
+    font-size: 22px;
+    cursor: pointer;
+    border: 2px solid $colorLight;
+    transition: $transition;
+}
+.contentItem:hover {
+    border-color: $colorMain;
+}
+.contentItemTitle {
+    padding: 0 5px;
+}

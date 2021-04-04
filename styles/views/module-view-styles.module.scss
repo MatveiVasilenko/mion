@@ -1,0 +1,203 @@
+@import './../global.module.scss';
+.modules {
+    display: flex;
+}
+.modulesHead {
+    color: $colorLight;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    &__Title {
+        font-size: 48px;
+        padding: 0 $padding;
+    }
+}
+.modulesLisp {
+    color: $colorLight;
+    width: 40%;
+    padding-left: 24px;
+}
+.modulesBody {
+    width: 60%;
+}
+.wrapper {
+    // display: flex;
+}
+.videoWrapper {
+    position: relative;
+}
+.controlsPanel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(180.94deg, #0E103D -31.53%, rgba(16, 18, 69, 0.41) 6.35%, rgba(89, 20, 57, 0.57) 55.93%, rgba(139, 17, 69, 0.68) 87.75%, rgba(205, 15, 50, 0.83) 108.65%);
+    border: 1px solid #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.controlsPanelRight {
+    display: flex;
+    align-items: center;
+}
+.controlsIcon {
+    margin: 0 8px;
+}
+.controlsPlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.controlsPlayFast {
+    position: absolute;
+    background-color: yellow;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.controlsTrackWrapper {
+    width: 100%;
+    position: absolute;
+    top: -15px;
+    left: 0;
+}
+.controlsTrack {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+}
+.controlsTrack::-webkit-slider-runnable-track {
+    height: 7px;
+    // border: 1px solid cyan;
+    background-color: $colorTrack;
+    &:focus {
+        border: none;
+    }
+}
+.controlsTrack::-webkit-slider-thumb {
+    background: $colorLight;
+    // border: 1px solid cyan;
+    border-radius: 50%;
+    cursor: pointer;
+    width:15px;
+    height: 15px;
+    -webkit-appearance: none;
+    margin-top: -4px;
+    &:focus {
+        border: none;
+    }
+  }
+.controlsTrack::-moz-range-track {
+      height: 5px;
+    //   border: 1px solid cyan;
+      background-color: $colorTrack;
+      &:focus {
+        border: none;
+    }
+}
+.controlsTrack::-moz-range-thumb {
+      background: $colorLight;
+    //   border: 1px solid cyan;
+      border-radius: 10px/100%;
+      cursor: pointer;
+      &:focus {
+        border: none;
+    }
+}
+.controlsVolumeWrapper {
+    position: relative;
+}
+.controlsVolumeTrack {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.controlsVolume {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100px;
+}
+.controlsVolume::-webkit-slider-runnable-track {
+    height: 7px;
+    // border: 1px solid cyan;
+    background-color: $colorTrack;
+    &:focus {
+        border: none;
+    }
+}
+.controlsVolume::-webkit-slider-thumb {
+    background: $colorLight;
+    // border: 1px solid cyan;
+    border-radius: 50%;
+    cursor: pointer;
+    width:15px;
+    height: 15px;
+    -webkit-appearance: none;
+    margin-top: -4px;
+    &:focus {
+        border: none;
+    }
+  }
+.controlsVolume::-moz-range-track {
+      height: 5px;
+    //   border: 1px solid cyan;
+      background-color: $colorTrack;
+      &:focus {
+        border: none;
+    }
+}
+.controlsVolume::-moz-range-thumb {
+      background: $colorLight;
+    //   border: 1px solid cyan;
+      border-radius: 10px/100%;
+      cursor: pointer;
+      &:focus {
+        border: none;
+    }
+}
+.comment {
+    display: flex;
+    color: $colorLight;
+    justify-content: flex-end;
+}
+@media screen and (max-width: 1700px) {
+    .modulesHead {
+        
+        &__Title {
+            font-size: 36px;
+        }
+    }
+}
+@media screen and (max-width: 1366px) {
+    
+}
+@media screen and (max-width: 768px) {
+    
+}
+@media screen and (max-width: 576px) {
+    .modulesHead {
+        
+        &__Title {
+            font-size: 22px;
+            padding: 0 12px;
+        }
+    }
+    .modules {
+        flex-wrap: wrap;
+    }
+    .modulesBody {
+        width: 100%;
+    }
+    .modulesLisp {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 12px;
+    }
+}

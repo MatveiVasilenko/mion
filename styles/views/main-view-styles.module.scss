@@ -1,0 +1,438 @@
+@import './../global.module.scss';
+
+.refferalHead {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    color: $colorLight;
+}
+.refferalHeadItem {
+    padding: 6px 12px;
+    background: $colorLight;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+    min-width: 220px;
+}
+.refferalHeadItemText {
+    color: $colorMain;
+    text-align: center;
+    font-size: 22px;
+}
+.refferalHeadItemNumber {
+    color: $colorTrack;
+    text-shadow: 0px 3px 4px rgba(118, 110, 170, 0.77);
+    text-align: center;
+    font-weight: 500;
+    font-size: 40px;
+}
+.headItemLine {
+    display: flex;
+    align-items: center;
+}
+.refferalHeadItemTarif {
+    padding: 6px 12px;
+    background: $colorLight;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 115px 0 85px;
+}
+.refferalHeadItemNumberDate {
+    color: $colorTrack;
+    text-shadow: 0px 3px 4px rgba(118, 110, 170, 0.77);
+    text-align: center;
+    font-weight: 500;
+    font-size: 36px;
+    margin-left: 10px;
+}
+.refferalHeadItemNumberTarif {
+    color: $colorTrack;
+    text-shadow: 0px 3px 4px rgba(118, 110, 170, 0.77);
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+    margin-left: 10px;
+}
+//MOBILE
+.refferalHeadMob {
+    height: 65px;
+    background: $backgroundMenu;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% + 24px);
+    margin-left: -12px;
+    margin-top: -10px;
+}
+.refferalHeadItemMob {
+    background: $backgroundMenuItem;
+    border: 1px solid $colorMain;
+    fill: $colorLight;
+    // stroke: $colorLight;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.refferalHeadItemWrapperMob {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+}
+.refferalHeadItemSvgMob {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateX(-50%);
+}
+.refferalHeadItemTextMob {
+    font-size: 12px;
+    color: $colorLight;
+}
+.refferalHeadItemTextMobSmall {
+    font-size: 10px;
+    color: $colorLight;
+}
+.refferalHeadItemNumberMob {
+    font-size: 16px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #FDFFA6 0%, #FF7A00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+.refferalHeadItemNumberMobSmall {
+    font-size: 12px;
+    font-weight: 700;
+    background: linear-gradient(180deg, #FDFFA6 0%, #FF7A00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 2px 0;
+}
+.mainBody {
+    width: 100%;
+    display: flex;
+}
+.mainBodyImage {
+    height: 70vh;
+    width: 35%;
+    background: url('./../../project/image/office.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 16px 24px 12px 0;
+}
+.mainBodyContent {
+    width: 65%;
+}
+.mainAction {
+    margin-top: 16px;
+    padding: 30px 0;
+    font-style: italic;
+    // text-shadow: 1px 2px 4px rgba(255, 138, 0, 0.78);
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    background: linear-gradient(90deg, #FFB800 0%, rgba(255, 219, 92, 0.640625) 43.83%, rgba(255, 255, 255, 0) 100%), #FFFFFF;;
+}
+.quote {
+    font-weight: 900;
+    font-style: italic;
+    color: $colorLight;
+    font-size: 44px;
+    text-align: center;
+    margin: 30px 0;
+    text-shadow: 1px 4px 4px #9E1039;
+}
+.btnQuote {
+    background: $colorLight;
+    // padding: 20px 50px;
+    height: 80px;
+    text-align: center;
+    margin: 15px auto;
+    font-size: 40px;
+    font-style: italic;
+    width: 350px;
+    font-weight: 900;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: $transition;
+    &:hover {
+        box-shadow: 0 0 2px 2px rgba(255,255,255,0.2);
+    }
+}
+.btnQuoteText {
+    background: $gradientMain;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // color: #0B2349;
+    display: table;
+}
+.why {
+    width: 800px;
+    color: $colorLight;
+    font-size: 26px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: $transition;
+    margin: 0 auto;
+    // text-align: center;
+}
+.whyActive {
+    opacity: 1;
+    height: fit-content;
+    overflow: visible;
+}
+.tarifWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+.tarifWrapperInner {
+    width: 80%;
+    padding-right: 24px;
+}
+.tarifWrapperInnerRight {
+    width: 20%;
+    padding-right: 0;
+    padding-left: 24px;
+}
+.tarifWrapperBody {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.tarifWrapperBodyPremium {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.mainTarifCard {
+    // width: 20%;
+    width: 230px;
+    height: 260px;
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    transition: $transition;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 16px 12px 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    box-shadow: 8px 8px 4px rgba(255, 255, 255, 0.4);
+    transform: scale(1);
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 8px 8px 10px 5px rgba(255, 255, 255, 0.4);
+    }
+}
+.mainTarifCardOne {
+    // width: 100%;
+}
+.mainTarifCardSale {
+    background: $gradientThird;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // color: #0B2349;
+    display: table;
+    font-size: 44px;
+    font-weight: 700;
+    margin: 50px 0;    
+}
+.mainTarifCardMounth {
+    color: $colorLight;
+    font-size: 28px;
+    font-weight: 700;
+}
+.mainTarifCardPrice {
+    font-size: 28px;
+    font-weight: 700;
+    color: #BFC0D6;
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 40%;
+        transform: rotateZ(-10deg);
+        left: -10%;
+        width: 120%;
+        height: 5px;
+        opacity: 0.6;
+        background: $colorSub;
+    }
+}
+.mainTarifBtn {
+    background: $colorLight;
+    color: $colorMain;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 12px 0;
+    cursor: pointer;
+    box-shadow: 8px 8px 4px rgba(255, 255, 255, 0.4);
+    transition: $transition;
+    &:hover {
+        color: $colorSub;
+    }
+}
+.tarifTitle {
+    font-weight: 700;
+    font-size: 44px;
+    text-align: center;
+    color: $colorLight;
+}
+.tarifTitlePremium {
+    font-weight: 700;
+    font-size: 44px;
+    text-align: center;
+    background: $gradientFour;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // color: #0B2349;
+    // display: table;
+}
+.tarifArrow {
+    margin: 10px 0 30px 0;
+}
+.mainTarifCardPremium {
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+.mainTarifCardPremiumTitle {
+    position: absolute;
+    width: 140%;
+    background: $gradientThird;
+    text-align: center;
+    padding: 15px 0;
+    transform: rotateZ(-10deg);
+    color: $colorMain;
+    font-weight: 700;
+    font-size: 32px;
+    top: 30%;
+}
+.mainTarifCardPremiumSubtitle {
+    color: $colorLight;
+    font-size: 20px;
+    font-weight: 500;
+}
+@media screen and (max-width: 1700px) {
+    .refferalHeadItem {
+        margin-right: 30px;
+    }
+    .refferalHeadItemTarif {
+        margin: 0 60px 0 40px;
+    }
+    .why {
+        width: 600px;
+        font-size: 22px;
+    }
+}
+.mainTextPar {
+    margin-bottom: 16px;
+    text-indent: 30px;
+}
+.mainShowWhyText {
+    margin-bottom: 12px;
+}
+@media screen and (max-width: 1500px) {
+    .mainTarifCard {
+        width: 200px;
+    }
+}
+@media screen and (max-width: 1366px) {
+    
+}
+@media screen and (max-width: 768px) {
+    .why {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .mainBody {
+        flex-wrap: wrap;
+    }
+    .tarifWrapperBody {
+        flex-wrap: wrap;
+    }
+    .mainBodyImage {
+        width: 100%;
+        margin: 12px 0;
+        height: 30vh;
+    }
+    .mainBodyContent {
+        width: 100%;
+        
+    }
+    .mainTarifBtn {
+        display: none;
+    }
+    .tarifWrapper {
+        flex-wrap: wrap;
+    }
+    .tarifWrapperInner {
+        width: 100%;
+        padding-right: 0;
+
+    }
+    .tarifWrapperInnerRight {
+        width: 100%;
+    }
+    .mainTarifCardWrapper {
+        width: 100%;
+    }
+    .mainTarifCard {
+        width: 100%;
+        height: fit-content;
+    }
+    .mainTarifCardSale {
+        margin: 10px 0;
+    }
+    .mainAction {
+        font-size: 22px;
+        padding: 16px 0;
+    }
+    .quote {
+        font-size: 32px;
+        margin: 12px 0;
+    }
+    .btnQuote {
+        font-size: 24px;
+        height: 60px;
+    }
+    .tarifArrow {
+        display: none;
+    }
+    .mainTarifCardPremium {
+        height: 200px;
+    }
+    .tarifWrapperInnerRight {
+        padding-left: 0;
+    }
+    .mainTarifCardPremiumTitle {
+        transform: rotateZ(-11deg);
+        top: 20%;
+    }
+    .tarifTitlePremium {
+        margin-top: 12px;
+    }
+}

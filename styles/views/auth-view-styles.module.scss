@@ -1,0 +1,104 @@
+@import './../global.module.scss';
+
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120.93deg, #0E103D 30.5%, #291750 45.33%, #741140 75.56%, #A90F35 91.8%);;
+    &__window {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $colorLight;
+        width: 40%;
+        padding: 30px 40px;
+        border-radius: 8px;
+        position: relative;
+    }
+    &__icon {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+}
+.inputWrapper {
+    width: 100%;
+}
+.input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid $colorMain;
+    border-radius: 16px;
+    font-size: 28px;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 16px;
+    &:focus {
+        outline: none;
+    }
+}
+.title {
+    font-size: 64px;
+    color: $colorMain;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+.btn {
+    font-family: $fontFamilySub;
+    border: 2px solid $colorMain;
+    border-radius: 16px;
+    color: $colorLigthSub;
+    text-align: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: $transition;
+    background: $colorMain;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    &:hover {
+        background: $colorLigthSub;
+        color: $colorMain;
+    }
+}
+.btnSubSub {
+    margin-bottom: 15px;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.btnSub {
+    font-size: 24px;
+    margin: 15px 0;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.politic {
+    display: flex;
+    align-items: center;
+}
+@media screen and (max-width: 1700px) {
+    .title {
+        font-size: 36px;
+    }
+}
+@media screen and (max-width: 1366px) {
+    
+}
+@media screen and (max-width: 768px) {
+    
+}
+@media screen and (max-width: 576px) {
+    .wrapper {
+        &__window {
+            width: 95%;
+            padding: 24px 12px;
+        }
+    }
+}
