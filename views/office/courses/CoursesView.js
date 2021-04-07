@@ -19,7 +19,7 @@ const CoursesView = ({
         }
     }, [stateApp, payment])
     const [pageCourse, setPageCourse] = useState(0)
-    const parentCourse = courses.filter((el) => el.course_id === null).slice(pageCourse, pageCourse + 2)
+    const parentCourse = courses.filter((el) => el.course_id === null).slice(pageCourse, pageCourse + 3)
     const [coursesData, setCoursesData] = useState(parentCourse)
     const [content, setContent] = useState([])
     const [showBack, setShowBack] = useState(false)
@@ -57,7 +57,7 @@ const CoursesView = ({
                                 key={`courses${idx}`}
                                 handleCourses={handleCourses}
                             />
-                            <div className={!showBack ? classes.courseItemDesc : [classes.courseItemDesc, classes.courseItemDescActive].join(' ')}>{el.description}</div>
+                            {showBack && <div className={!showBack ? classes.courseItemDesc : [classes.courseItemDesc, classes.courseItemDescActive].join(' ')}>{el.description}</div>}
                         </>
                     ))
                 }

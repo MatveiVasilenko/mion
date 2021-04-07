@@ -120,6 +120,11 @@
 .contentItemTitle {
     padding: 0 5px;
 }
+.courseItemImage {
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+}
 @media screen and (max-width: 1700px) {
     .courseItem {
         // width: 60%;
@@ -162,5 +167,15 @@
     .contentParentActive {
         padding: 0px;
         width: 100%;
+    }
+    .courseItemDesc {
+        font-size: 18px;
+    }
+    .courseItemDescActive {
+        height: fit-content;
+    }
+    .courseItemImage {
+        width: auto;
+        height: 100%;
     }
 }

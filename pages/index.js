@@ -4,67 +4,34 @@ import React, {
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import ContextApp from './../context/App/ContextApp';
+import { useRouter } from 'next/router';
 
 export default function Home() {
   const {stateApp} = useContext(ContextApp)
+
+  const router = useRouter()
+    const goApp = () => {
+      router.push('/ru/auth/login')
+    }
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <meta name="keywords" content="MOTICH PRODUCTION, обучающая платформа, Front-end, Back-end, React, Laravel"/>
+        <meta name="description" content="MOTICH PRODUCTION - обучающая платформа, которая позволит Вам стать востребованным разработчиком уже через несколько месяцев!"/>
+        <meta name="author" content="MION" />
+        <title>MOTICH PRODUCTION | Стань востребованным специалистом!</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div className={styles.main}>
+        <div className={styles.first}>
+          <div className={styles.firstBody}>
+            <div className={styles.firstTitle}>Зарплата JS Middle и Full-Stack разработчика - 1000$ и выше</div>
+            <div className={styles.firstSubtitle}>Хватит сомневаться - пора изменить свою жизнь!</div>
+          </div>
+          <div onClick={goApp} className={styles.firstButton}>START</div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      </div>
     </div>
   )
 }

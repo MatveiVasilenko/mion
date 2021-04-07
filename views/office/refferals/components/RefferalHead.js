@@ -11,14 +11,8 @@ const RefferalHead = ({
 }) => {
     const { width } = useWindowDimensions();    
     const mobile = width < 768 ? true : false
+    const [showInfo, setShowInfo] = useState(false)
 
-    // const widthDimensions = useWindowDimensions();
-    // const [mobile, setMobile] = useState('');
-    // useEffect(() => {
-    //     widthDimensions < 768
-    //         ? setMobile(true)
-    //         : setMobile(false);
-    // }, [widthDimensions]);
 
     const [counter, setCounter] = useState({
         all: 0,
@@ -91,68 +85,93 @@ const RefferalHead = ({
                     <div className={classes.refferalHeadItemNumber}>{counter.futureMoney} y.e</div>
                     <div className={classes.refferalHeadItemText}>Потенциальный доход</div>
                 </div>
-            </div>            
-        </div>: 
-        <div className={classes.refferalHeadMob}>
-            <div className={classes.refferalHeadItemMob}>
-                <div className={classes.refferalHeadItemWrapperMob}>
-                    <div style={{'margin-right': '3px'}}>
-                        {svgSprite('MoneyList', {
-                            width: '13px',
-                            height: '13px'
-                        })}
-                    </div>
-                    <div className={classes.refferalHeadItemTextMob}>Баланс</div>
-                </div>
-                <div>
-                    <div className={classes.refferalHeadItemNumberMob}>{user && user.money}</div>
-                </div>
             </div>
-            <div className={classes.refferalHeadItemMob}>
-                <div className={classes.refferalHeadItemWrapperMob}>
-                    <div className={classes.refferalHeadItemTextMob}>Всего</div>
-                </div>
-                <div>
-                    <div className={classes.refferalHeadItemNumberMob}>{counter.all}</div>
-                </div>
-            </div>
-            <div className={classes.refferalHeadItemMob}>
-                <div className={classes.refferalHeadItemWrapperMob}>
-                    <div className={classes.refferalHeadItemSvgMob}>
-                        {svgSprite('Users', {
-                            width: '20px',
-                            height: '20px'
-                        })}
-                    </div>
-                    <div className={classes.refferalHeadItemTextMob}>Актив</div>
-                </div>
-                <div>
-                    <div className={classes.refferalHeadItemNumberMob}>{counter.active}</div>
-                </div>
-            </div>
-            <div className={classes.refferalHeadItemMob}>
-                <div className={classes.refferalHeadItemWrapperMob}>
-                    <div className={classes.refferalHeadItemTextMob}>Расчет</div>
-                </div>
-                <div>
-                    <div className={classes.refferalHeadItemNumberMob}>{counter.realMoney}</div>
-                </div>
-            </div>
-            <div className={classes.refferalHeadItemMob}>
-                <div className={classes.refferalHeadItemWrapperMob}>
-                    <div className={classes.refferalHeadItemSvgMob}>
-                        {svgSprite('Money', {
-                            width: '20px',
-                            height: '20px'
-                        })}
-                    </div>
-                    <div className={classes.refferalHeadItemTextMob}>Полный</div>
-                </div>
-                <div>
-                    <div className={classes.refferalHeadItemNumberMob}>{counter.futureMoney}</div>
+            <div
+                onMouseEnter={() => setShowInfo(true)} 
+                onMouseLeave={() => setShowInfo(false)}
+                className={classes.refferalInfo}
+                >
+                {svgSprite('Info', {
+                    width: '19px',
+                    height: '45px'
+                })}
+                <div 
+                    className={showInfo ? [classes.refferalInfoWindow, classes.refferalInfoWindowActive].join(' ') : classes.refferalInfoWindow}>
+                    <p>І уровень - Вы получаете 10% от стоимости подписки в месяц за каждого оформившего подписку партнера.</p>
+                    <p>ІІ уровень - 5% - за каждого оформившего подписку Вашим партнером нового партнера.</p>
+                    <p>ІІІ уровень - открывается, когда в Вашу структуру приходит 30-й партнер, с дополнительными 3% за каждого партнера, которого привела уже вторая линия независимо от Вас.</p>
                 </div>
             </div>            
-        </div>
+        </div>:
+        <div>
+            <div className={classes.refferalHeadMob}>
+                <div className={classes.refferalHeadItemMob}>
+                    <div className={classes.refferalHeadItemWrapperMob}>
+                        <div style={{'margin-right': '3px'}}>
+                            {svgSprite('MoneyList', {
+                                width: '13px',
+                                height: '13px'
+                            })}
+                        </div>
+                        <div className={classes.refferalHeadItemTextMob}>Баланс</div>
+                    </div>
+                    <div>
+                        <div className={classes.refferalHeadItemNumberMob}>{user && user.money}</div>
+                    </div>
+                </div>
+                <div className={classes.refferalHeadItemMob}>
+                    <div className={classes.refferalHeadItemWrapperMob}>
+                        <div className={classes.refferalHeadItemTextMob}>Всего</div>
+                    </div>
+                    <div>
+                        <div className={classes.refferalHeadItemNumberMob}>{counter.all}</div>
+                    </div>
+                </div>
+                <div className={classes.refferalHeadItemMob}>
+                    <div className={classes.refferalHeadItemWrapperMob}>
+                        <div className={classes.refferalHeadItemSvgMob}>
+                            {svgSprite('Users', {
+                                width: '20px',
+                                height: '20px'
+                            })}
+                        </div>
+                        <div className={classes.refferalHeadItemTextMob}>Актив</div>
+                    </div>
+                    <div>
+                        <div className={classes.refferalHeadItemNumberMob}>{counter.active}</div>
+                    </div>
+                </div>
+                <div className={classes.refferalHeadItemMob}>
+                    <div className={classes.refferalHeadItemWrapperMob}>
+                        <div className={classes.refferalHeadItemTextMob}>Расчет</div>
+                    </div>
+                    <div>
+                        <div className={classes.refferalHeadItemNumberMob}>{counter.realMoney}</div>
+                    </div>
+                </div>
+                <div className={classes.refferalHeadItemMob}>
+                    <div className={classes.refferalHeadItemWrapperMob}>
+                        <div className={classes.refferalHeadItemSvgMob}>
+                            {svgSprite('Money', {
+                                width: '20px',
+                                height: '20px'
+                            })}
+                        </div>
+                        <div className={classes.refferalHeadItemTextMob}>Полный</div>
+                    </div>
+                    <div>
+                        <div className={classes.refferalHeadItemNumberMob}>{counter.futureMoney}</div>
+                    </div>
+                </div>            
+            </div>
+            <div 
+                    className={classes.refferalInfoMobile}>
+                    <p>І уровень - Вы получаете 10% от стоимости подписки в месяц за каждого оформившего подписку партнера.</p>
+                    <p>ІІ уровень - 5% - за каждого оформившего подписку Вашим партнером нового партнера.</p>
+                    <p>ІІІ уровень - открывается, когда в Вашу структуру приходит 30-й партнер, с дополнительными 3% за каждого партнера, которого привела уже вторая линия независимо от Вас.</p>
+                </div>
+
+        </div> 
     )
 }
 export default RefferalHead

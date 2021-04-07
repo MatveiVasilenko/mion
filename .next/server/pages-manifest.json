@@ -1,16 +1,7 @@
 {
-  "/[lang]/auth/login": "pages/[lang]/auth/login.html",
-  "/[lang]/auth/register": "pages/[lang]/auth/register.html",
-  "/[lang]": "pages/[lang].html",
-  "/[lang]/office/courses": "pages/[lang]/office/courses.js",
-  "/[lang]/office": "pages/[lang]/office.html",
-  "/[lang]/office/modules": "pages/[lang]/office/modules.js",
-  "/[lang]/office/partners": "pages/[lang]/office/partners.html",
-  "/[lang]/office/profile": "pages/[lang]/office/profile.html",
   "/_app": "pages/_app.js",
-  "/api/hello": "pages/api/hello.js",
-  "/": "pages/index.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/[lang]/auth/login": "pages/[lang]/auth/login.js",
+  "/[lang]/office/courses": "pages/[lang]/office/courses.js"
 }

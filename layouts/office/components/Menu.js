@@ -31,8 +31,8 @@ const Menu = () => {
 
                         }}>
                             {svgSprite(item.svg, {
-                                width: '55px',
-                                height: '45px',
+                                width: '45px',
+                                height: '40px',
                                 
                             })}
                         </div>

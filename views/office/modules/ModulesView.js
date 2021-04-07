@@ -38,7 +38,9 @@ const ModulesView = ({
                         <div style={{
                             paddingRight: 10
                         }}>Комментировать в </div>
-                        <div>
+                        <div onClick={() => {
+                            window.location.href = 'https://t.me/joinchat/VACiGopahkQRRYXJ'}   
+                        }>
                             {svgSprite('Telegram', {
                                 width: '36px',
                                 height: '24px'                                

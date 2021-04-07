@@ -36,6 +36,7 @@
 }
 .officeWrapperBody {
     display: flex;
+    min-height: 95vh;
 }
 .officeWrapperMenu {
     background-color: $colorMain;
@@ -52,6 +53,7 @@
 .officeWrapperMenuItem {
     cursor: pointer;
     font-size: 24px;
+    font-family: $fontFamilySub;
     padding: 20px 0 10px 0;
     border-bottom: 1px solid $colorLight;
     transition: $transition;

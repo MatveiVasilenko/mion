@@ -23,7 +23,7 @@
 }
 .refferalHeadItemNumber {
     color: $colorTrack;
-    text-shadow: 0px 3px 4px rgba(118, 110, 170, 0.77);
+    // text-shadow: 0px 3px 4px rgba(118, 110, 170, 0.77);
     text-align: center;
     font-weight: 500;
     font-size: 40px;
@@ -44,7 +44,7 @@
 }
 .refferalHeadItemNumberDate {
     color: $colorTrack;
-    text-shadow: 0px 3px 4px rgba(118, 110, 170, 0.77);
+    // text-shadow: 0px 3px 4px rgba(118, 110, 170, 0.77);
     text-align: center;
     font-weight: 500;
     font-size: 36px;
@@ -52,7 +52,7 @@
 }
 .refferalHeadItemNumberTarif {
     color: $colorTrack;
-    text-shadow: 0px 3px 4px rgba(118, 110, 170, 0.77);
+    // text-shadow: 0px 3px 4px rgba(118, 110, 170, 0.77);
     text-align: center;
     font-weight: 500;
     font-size: 24px;
@@ -222,10 +222,20 @@
     }
 }
 @media screen and (max-width: 1700px) {
-    
+    .refferalHeadItemTarif {
+        margin: 0 60px 0 40px;
+    }
+    .refferalHeadItem {
+        margin-right: 30px;
+    }
 }
 @media screen and (max-width: 1500px) {
-    
+    .refferalHeadItemTarif {
+        margin: 0 20px 0 0px;
+    }
+    .refferalHeadItem {
+        margin-right: 20px;
+    }
 }
 @media screen and (max-width: 1366px) {
     

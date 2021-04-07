@@ -20,7 +20,7 @@
 }
 .refferalHeadItemNumber {
     color: $colorTrack;
-    text-shadow: 0px 3px 4px rgba(118, 110, 170, 0.77);
+    // text-shadow: 0px 3px 4px rgba(118, 110, 170, 0.77);
     text-align: center;
     font-weight: 500;
     font-size: 40px;
@@ -139,6 +139,49 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
+}
+.refferalInfo {
+    width: 100px;
+    height: 100px;
+    background: $colorLight;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.refferalInfoWindow {
+    width: 300px;
+    padding: 12px;
+    border-radius: 12px;
+    background: $colorLight;
+    position: absolute;
+    left: -310px;
+    top: 0;
+    opacity: 0;
+    box-shadow: $boxShadow;
+    color: $colorMain;
+    transition: $transition;
+}
+.refferalInfoWindow p {
+    text-indent: 25px;
+}
+.refferalInfoWindowActive {
+    opacity: 1;
+}
+.refferalInfoMobile {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    background: $colorLight;
+    color: $colorMain;
+    margin-top: 12px;
+}
+.refferalInfoMobile p {
+    margin: 0;
+    margin-bottom: 12px;
+    text-indent: 25px;
 }
 @media screen and (max-width: 1700px) {
     

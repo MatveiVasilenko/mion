@@ -27,7 +27,7 @@ const CourseItem = ({
                     <div>последнее обновление</div>
                 </div>
             </div>
-            <img src={`${NET.BACK_URL_MODULE}${el.img}`} style={{opacity: '0.2', width: '100%'}} />
+            <img className={classes.courseItemImage} src={`${NET.BACK_URL_MODULE}${el.img}`} style={{opacity: '0.2', width: '100%'}} />
         </div>
         </>
     )

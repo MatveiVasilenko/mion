@@ -9,6 +9,7 @@ import ContextApp from './../../../context/App/ContextApp';
 import ProfileLisp from './components/ProfileLisp';
 import ProfileImage from './components/ProfileImage';
 import ProfileLink from './components/ProfileLink';
+import ProfileButtonEnd from './components/ProfileButtonEnd';
 
 
 const ProfileView = ({
@@ -28,10 +29,10 @@ const ProfileView = ({
             />}
             <div className={classes.profileWrapper}>
                 <div className={classes.profileItemLeft}>
-                    <div className={classes.profileBtnTarif}>
-                        <div className={classes.profileBtnTarifUp}>Продлить тариф</div>
-                        <div className={classes.profileBtnTarifDown}>осталось 7 дней</div>
-                    </div>
+                    <ProfileButtonEnd 
+                        classes={classes}
+                        date={stateApp.user.day_end}
+                        /> 
                     <div>
                         <ProfileLisp 
                             classes={classes}

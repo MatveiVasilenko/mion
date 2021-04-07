@@ -83,6 +83,14 @@
     display: flex;
     align-items: center;
 }
+.politicLink {
+    color: $colorMain;
+}
+.politicError {
+    color: $colorSub;
+    margin: 5px 0;
+    text-align: center;
+}
 @media screen and (max-width: 1700px) {
     .title {
         font-size: 36px;

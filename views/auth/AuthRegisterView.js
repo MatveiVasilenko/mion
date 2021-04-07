@@ -21,7 +21,7 @@ const AuthRegisterView = () => {
         email: '',
         phone: '',
         tokenName: 'userToken',
-        politic: false
+        politic: true
     })
     const [errorsData, setErrorsData] = useState({})
 
@@ -53,24 +53,13 @@ const AuthRegisterView = () => {
                 })
             } else if (response.status === 401) {
                 response.json().then((errors) => {
-                    // if (errors.error === 'password') {
-                    //     setErrorsData({
-                    //         ...errorsData,
-                    //         password: 'Пароль введен неверно'
-                    //     })
-                    // } else if (errors.error === 'no-user') {
-                    //     setErrorsData({
-                    //         ...errorsData,
-                    //         email: 'Пользователь не зарегестрирован'
-                    //     })
-                    // } else {
                         const keys = Object.keys(errors.error)
                         let acc = {}
                         keys.map((el) => {
                             console.log(errors.error[el])
                             if (errors.error[el][0] === 'The email has already been taken.') {
                                 return acc[el] = 'Пользователь уже зарегистрирован.'
-                            } else if (errors.error[el][0] === 'The name field is required.' || errors.error[el][0] === 'The surname field is required.' || errors.error[el][0] === 'The email field is required.' || errors.error[el][0] === 'The phone field is required.' || errors.error[el][0] === 'The password field is required.') {
+                            } else if (errors.error[el][0] === 'The name field is required.' || errors.error[el][0] === 'The surname field is required.' || errors.error[el][0] === 'The email field is required.' || errors.error[el][0] === 'The phone field is required.' || errors.error[el][0] === 'The password field is required.' || errors.error[el][0] === 'The surname field is required.' || errors.error[el][0] === 'The email field is required.' || errors.error[el][0] === 'The phone field is required.' || errors.error[el][0] === 'The repeat password field is required.') {
                                 return acc[el] = 'Поле должно быть заполнено'
                             } else {
                                 return acc[el] = errors.error[el]
@@ -79,6 +68,19 @@ const AuthRegisterView = () => {
                         })
                         setErrorsData(acc)
                     // }
+                })
+            } else if (response.status === 422) {
+                response.json().then((error) => {
+                    if (error === 'Politic') {
+                        setErrorsData({
+                            politic: 'Yes'
+                        })
+                    } else {
+                        setErrorsData({
+                            password: ['Пароли не совпадают'],
+                            repeatPassword: ['Пароли не совпадают'],
+                        })
+                    }
                 })
             }
         })
@@ -156,17 +158,18 @@ const AuthRegisterView = () => {
                     })}
                     >
                     <div>
-                        {svgSprite(data.politic ? 'AuthCheckFalse' : 'AuthCheckTrue', {
-                            width: data.politic ? '40px' : '45px',
+                        {svgSprite(data.politic ? 'AuthCheckTrue' : 'AuthCheckFalse', {
+                            width: data.politic ? '45px' : '40px',
                             height: '45px'
                         })}
                     </div>
                     <div style={{
                         'margin-left': data.politic ? '4px' : 0
                     }}>
-                        Я согласен с политикой конфиденциальности
+                        Я согласен с <a className={classes.politicLink} href="https://mion.courses/politic" target="_blank">политикой конфиденциальности</a>
                     </div>
                 </div>
+                {errorsData['politic'] === 'Yes' && <div className={classes.politicError}>Необходимо принять условия политики конфиденциальности</div>}
                 <div
                     className={classes.btn}
                     onClick={dataSender}
